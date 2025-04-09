@@ -7,11 +7,14 @@ const db = require("./config/db")
 const router = require("./router")
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin : "https://codano-p.vercel.app"
+}))
 app.use(router)
 
 db()
 
-app.listen(8000, ()=>{
+const port = process.env.PORT || 8000
+app.listen(port, ()=>{
     console.log("port connect")
 })
