@@ -13,7 +13,7 @@ const emailSubs = async (req, res) => {
 
         // checking if the email already exists
         const existEmail = await emailSchma.findOne({ email })
-        if (existEmail) return res.status(400).send({ errMsg: "Email Already Exists" })
+        if (existEmail) return res.status(400).send({ errMsg: "Already Subscribed" })
 
         // save email in database
         const newEmail = new emailSchma({
