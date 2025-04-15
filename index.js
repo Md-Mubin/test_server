@@ -9,8 +9,7 @@ const router = require("./router")
 app.use(express.json())
 app.use(cors({
     origin : "https://codano-p.vercel.app",
-    credentials : true,
-    methods : ["GET", "POST"]
+    credentials : true
 }))
 app.use(router)
 
