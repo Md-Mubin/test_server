@@ -24,7 +24,7 @@ const emailSubs = async (req, res) => {
         return res.status(200).send({ success: "Subscribe Successfull" })
 
     } catch (error) {
-        return res.status(500).send({ serverErr: "Internal Server Error" })
+        return res.status(500).send({ errMsg: "Internal Server Error" })
     }
 }
 
