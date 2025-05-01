@@ -8,13 +8,15 @@ const router = require("./router")
 
 app.use(express.json())
 app.use(cors({
-    origin : "https://codano-p.vercel.app",
-    credentials : true
+    origin: "https://codano-p.vercel.app",
+    methods: ["POST"],
+    allowedHeaders: ["Content-Type"],
+    credentials: true
 }))
 app.use(router)
 
 db()
 
-app.listen(process.env.PORT , ()=>{
+app.listen(process.env.PORT, () => {
     console.log("port connect")
 })
