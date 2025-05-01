@@ -15,7 +15,6 @@ app.use(router)
 
 db()
 
-const port = process.env.PORT || 8000
-app.listen(port, ()=>{
+app.listen(process.env.PORT , ()=>{
     console.log("port connect")
 })
