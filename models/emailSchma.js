@@ -8,4 +8,4 @@ const emailSchema = new SCHEMA({
     }
 })
 
-module.exports = mongoose.model("emails" , emailSchema)
+module.exports = mongoose.model("emailSubscribe" , emailSchema)
