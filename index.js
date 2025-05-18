@@ -7,9 +7,8 @@ const db = require("./config/db")
 const router = require("./router")
 
 app.use(express.json())
-app.options("*", cors())
 app.use(cors({
-    origin: process.env.CLIENT_API_LINK,
+    origin: "https://codano-p.vercel.app",
     methods: ["POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true
