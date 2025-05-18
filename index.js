@@ -7,6 +7,7 @@ const db = require("./config/db")
 const router = require("./router")
 
 app.use(express.json())
+app.options("*", cors())
 app.use(cors({
     origin: process.env.CLIENT_API_LINK,
     methods: ["POST"],
