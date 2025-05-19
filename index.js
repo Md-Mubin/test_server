@@ -17,6 +17,6 @@ app.use(router)
 
 db()
 
-app.listen(process.env.PORT, () => {
+app.listen(8000, () => {
     console.log("port connect")
 })
