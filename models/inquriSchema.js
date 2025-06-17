@@ -32,6 +32,6 @@ const inquriSchema = new SCHEMA({
         type: String,
         required: true
     }
-})
+},{timestamos : true})
 
 module.exports = mongoose.model("inquriesData", inquriSchema)
